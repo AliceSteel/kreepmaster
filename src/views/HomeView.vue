@@ -3,7 +3,7 @@
     class="w-full h-screen bg-cover bg-center"
     style="background-image: url('/img/homepage.png')"
   >
-    <div class="container_glitch w-1/4 font-[Exan]">
+    <div class="container_glitch font-[Exan]">
       <div class="glitch" data-text="KreepMaster">kreepmaster</div>
       <div class="glow">kreepmaster</div>
       <p class="subtitle">instrumental metal</p>
@@ -23,7 +23,8 @@ export default {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 40%;
-  left: 30%;
+  left: 50%;
+  width: fit-content;
 }
 
 .glitch {
@@ -322,9 +323,10 @@ export default {
   font-size: 0.8vw;
   color: #fff;
   text-transform: uppercase;
-  position: relative;
-  top: 0%;
-  left: 30%;
+  width: 100%;
+  position: absolute;
+  top: 200%;
+  text-align: center;
   animation: glitch-2 5s 5.02s infinite;
 }
 
