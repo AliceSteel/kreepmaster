@@ -18,11 +18,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container_glitch {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 40%;
+  top: 45%;
   left: 50%;
   width: fit-content;
 }
@@ -31,7 +31,6 @@ export default {
   color: #fff;
   position: relative;
   font-size: 7vw;
-
   animation: glitch 5s 5s infinite;
 }
 
@@ -65,7 +64,7 @@ export default {
     transform: rotateX(0deg) skewX(0deg);
   }
 }
-/*
+
 @keyframes noise-1 {
   $steps: 30;
   @for $i from 1 through $steps {
@@ -76,196 +75,8 @@ export default {
     }
   }
 }
-*/
-@keyframes noise-1 {
-  3.3333333333% {
-    clip-path: inset(37px 0 25px 0);
-  }
-  6.6666666667% {
-    clip-path: inset(52px 0 10px 0);
-  }
-  10% {
-    clip-path: inset(14px 0 75px 0);
-  }
-  13.3333333333% {
-    clip-path: inset(23px 0 66px 0);
-  }
-  16.6666666667% {
-    clip-path: inset(51px 0 27px 0);
-  }
-  20% {
-    clip-path: inset(31px 0 48px 0);
-  }
-  23.3333333333% {
-    clip-path: inset(91px 0 3px 0);
-  }
-  26.6666666667% {
-    clip-path: inset(66px 0 11px 0);
-  }
-  30% {
-    clip-path: inset(94px 0 3px 0);
-  }
-  33.3333333333% {
-    clip-path: inset(8px 0 77px 0);
-  }
-  36.6666666667% {
-    clip-path: inset(91px 0 9px 0);
-  }
-  40% {
-    clip-path: inset(39px 0 16px 0);
-  }
-  43.3333333333% {
-    clip-path: inset(70px 0 16px 0);
-  }
-  46.6666666667% {
-    clip-path: inset(15px 0 2px 0);
-  }
-  50% {
-    clip-path: inset(62px 0 28px 0);
-  }
-  53.3333333333% {
-    clip-path: inset(76px 0 15px 0);
-  }
-  56.6666666667% {
-    clip-path: inset(16px 0 44px 0);
-  }
-  60% {
-    clip-path: inset(53px 0 30px 0);
-  }
-  63.3333333333% {
-    clip-path: inset(63px 0 29px 0);
-  }
-  66.6666666667% {
-    clip-path: inset(76px 0 3px 0);
-  }
-  70% {
-    clip-path: inset(3px 0 53px 0);
-  }
-  73.3333333333% {
-    clip-path: inset(81px 0 3px 0);
-  }
-  76.6666666667% {
-    clip-path: inset(56px 0 26px 0);
-  }
-  80% {
-    clip-path: inset(10px 0 67px 0);
-  }
-  83.3333333333% {
-    clip-path: inset(94px 0 1px 0);
-  }
-  86.6666666667% {
-    clip-path: inset(50px 0 40px 0);
-  }
-  90% {
-    clip-path: inset(72px 0 14px 0);
-  }
-  93.3333333333% {
-    clip-path: inset(24px 0 69px 0);
-  }
-  96.6666666667% {
-    clip-path: inset(35px 0 26px 0);
-  }
-  100% {
-    clip-path: inset(19px 0 14px 0);
-  }
-}
 
 @keyframes noise-2 {
-  0% {
-    clip-path: inset(30px 0 69px 0);
-  }
-  3.3333333333% {
-    clip-path: inset(34px 0 3px 0);
-  }
-  6.6666666667% {
-    clip-path: inset(2px 0 77px 0);
-  }
-  10% {
-    clip-path: inset(73px 0 26px 0);
-  }
-  13.3333333333% {
-    clip-path: inset(18px 0 29px 0);
-  }
-  16.6666666667% {
-    clip-path: inset(26px 0 53px 0);
-  }
-  20% {
-    clip-path: inset(29px 0 42px 0);
-  }
-  23.3333333333% {
-    clip-path: inset(74px 0 4px 0);
-  }
-  26.6666666667% {
-    clip-path: inset(33px 0 11px 0);
-  }
-  30% {
-    clip-path: inset(77px 0 23px 0);
-  }
-  33.3333333333% {
-    clip-path: inset(36px 0 14px 0);
-  }
-  36.6666666667% {
-    clip-path: inset(1px 0 36px 0);
-  }
-  40% {
-    clip-path: inset(61px 0 30px 0);
-  }
-  43.3333333333% {
-    clip-path: inset(47px 0 8px 0);
-  }
-  46.6666666667% {
-    clip-path: inset(91px 0 2px 0);
-  }
-  50% {
-    clip-path: inset(1px 0 6px 0);
-  }
-  53.3333333333% {
-    clip-path: inset(14px 0 41px 0);
-  }
-  56.6666666667% {
-    clip-path: inset(75px 0 24px 0);
-  }
-  60% {
-    clip-path: inset(59px 0 13px 0);
-  }
-  63.3333333333% {
-    clip-path: inset(76px 0 14px 0);
-  }
-  66.6666666667% {
-    clip-path: inset(88px 0 9px 0);
-  }
-  70% {
-    clip-path: inset(78px 0 23px 0);
-  }
-  73.3333333333% {
-    clip-path: inset(14px 0 30px 0);
-  }
-  76.6666666667% {
-    clip-path: inset(74px 0 26px 0);
-  }
-  80% {
-    clip-path: inset(19px 0 25px 0);
-  }
-  83.3333333333% {
-    clip-path: inset(43px 0 58px 0);
-  }
-  86.6666666667% {
-    clip-path: inset(58px 0 26px 0);
-  }
-  90% {
-    clip-path: inset(91px 0 1px 0);
-  }
-  93.3333333333% {
-    clip-path: inset(1px 0 96px 0);
-  }
-  96.6666666667% {
-    clip-path: inset(44px 0 39px 0);
-  }
-  100% {
-    clip-path: inset(59px 0 6px 0);
-  }
-}
-/*@keyframes noise-2 {
   $steps: 30;
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
@@ -274,7 +85,7 @@ export default {
       clip-path: inset(#{$top}px 0 #{$bottom}px 0);
     }
   }
-}*/
+}
 
 .scanlines {
   overflow: hidden;
@@ -285,7 +96,7 @@ export default {
   content: '';
   position: absolute;
   width: 100%;
-  height: 90%;
+  height: 98%;
   top: 0;
   left: 0;
 
