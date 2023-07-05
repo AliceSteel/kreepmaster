@@ -103,7 +103,7 @@ export default {
   background: repeating-linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(255, 255, 255, 0.05) 0.5%,
+    rgba(0, 255, 133, 0.15) 0.5%,
     transparent 1%
   );
 

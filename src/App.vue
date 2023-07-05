@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-black text-white font-body text-2xl">
+  <main class="bg-zinc-900 text-white font-body text-2xl scroll-smooth">
     <app-header />
     <router-view />
   </main>
