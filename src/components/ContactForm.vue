@@ -4,11 +4,11 @@
     @submit.prevent="checkAndSend"
     novalidate="true"
   >
-    <div class="w-full border-b border-white relative h-28">
+    <div class="w-full border-b border-white relative">
       <input
         v-model.trim="name"
         @focus="resetError('name')"
-        class="w-full bg-inherit py-4 pr-[18.7%] capitilize border-none border-transparent"
+        class="w-full bg-inherit py-4 px-[20%] capitilize border-none border-transparent"
         type="text"
         placeholder=" "
         name="name"
@@ -22,11 +22,11 @@
       </div>
     </div>
 
-    <div class="w-full border-b border-white relative h-28">
+    <div class="w-full border-b border-white relative">
       <input
         v-model.trim="email"
         @focus="resetError('email')"
-        class="w-full bg-inherit py-4 pr-[18.7%] capitilize border-none border-transparent"
+        class="w-full bg-inherit py-4 px-[20%] capitilize border-none border-transparent"
         type="email"
         placeholder=" "
         name="email"
@@ -40,12 +40,12 @@
       </div>
     </div>
 
-    <div class="w-full border-b border-white relative h-60">
+    <div class="w-full border-b border-white relative">
       <textarea
         v-model.trim="message"
-        rows="2"
+        rows="3"
         @focus="resetError('message')"
-        class="w-full bg-inherit pt-4 pb-16 pr-[18.7%] capitilize border-none border-transparent overflow-hidden resize-none"
+        class="w-full bg-inherit py-4 capitilize border-none border-transparent overflow-hidden resize-none"
         type="text"
         name="message"
         placeholder=" "
@@ -59,10 +59,18 @@
       </div>
     </div>
 
-    <button id="form_btn" type="submit">
-      <span><sup>(4) </sup>Submit</span>
+    <button
+      type="submit"
+      class="w-full bg-transparent capitalize border-b border-b-white flex justify-start items-start relative py-4 px-[20%] text-3xl"
+    >
+      Send
     </button>
-    <div v-if="this.answer.success" class="success">{{ answer.text }}</div>
+    <div
+      v-if="this.answer.success"
+      class="absolute left-1/4 top-full text-green-500 text-3xl text-left"
+    >
+      {{ answer.text }}
+    </div>
   </form>
 </template>
 
@@ -109,17 +117,25 @@ export default {
       }
 
       if (valid) {
-        const message_text =
+        /*const message_text =
           '<i>Message from KreepMaster</i>' +
           '%0a<b>Name: </b>' +
           this.name +
           '%0a<b>Email: </b>' +
           this.email +
           '%0a<b>Message: </b>' +
-          this.message
-        fetch(
-          `https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${message_text}&parse_mode=HTML`
-        )
+          this.message*/
+        fetch /*POST https://gmail.googleapis.com/gmail/v1/users/alicedevlab%40gmail.com/messages/send?key=[YOUR_API_KEY] HTTP/1.1
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json
+Content-Type: application/json
+
+{
+  "raw": "RnJvbTogSm9obiBEb2UgPGpkb2VAbWFjaGluZS5leGFtcGxlPiAKVG86IE9sZ2EgR2Fya3VzaGEgPG9sZ2EuZy5jcGhAZ21haWwuY29tPiAKU3ViamVjdDogU2F5aW5nIEhlbGxvIApEYXRlOiBUaHVyLCAwNiBKdWwgMjAyMyAwOTo1NTowNiAtMDYwMCAKTWVzc2FnZS1JRDogPDEyMzRAbG9jYWwubWFjaGluZS5leGFtcGxlPgoKVGhpcyBpcyBhIG1lc3NhZ2UganVzdCB0byBzYXkgaGVsbG8uIFNvLCAiSGVsbG8iLiA="
+}*/()
+          /*          `https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${message_text}&parse_mode=HTML`
+           */
           .then((resp) => {
             return resp.json()
           })
@@ -165,10 +181,9 @@ export default {
 .floating_label {
   width: 100%;
   position: absolute;
-  padding: 1rem 18.7%;
+  padding: 1rem 20%;
   text-transform: capitalize;
-  font-size: 4.5rem;
-  line-height: 3rem;
+  font-size: 2rem;
   pointer-events: none;
   left: 0;
   top: 0;
@@ -181,7 +196,7 @@ input:focus {
   outline: none;
   ~ .floating_label {
     top: -1.5rem;
-    font-size: 1.9rem;
+    font-size: 1rem;
     background-color: transparent;
   }
 }
@@ -192,53 +207,26 @@ input:not(:placeholder-shown) ~ .floating_label {
   background-color: transparent;
 }
 
-#form_btn {
-  width: 100%;
-  background-color: transparent;
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: 500;
-  text-transform: capitalize;
-  font-size: 4.5rem;
-  color: #000;
-  border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
-  padding: 1rem 18.7%;
-  &::before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%;
-    border-top: 1px solid #fff;
-    top: -7.7rem;
-    left: 0;
-  }
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-color: #fff;
-    color: #000;
-  }
-}
-///Error messages:___________--
-
-.success {
+button::before {
   position: absolute;
-  left: 20%;
-  top: 105%;
-  color: green;
-  font-size: 2rem;
-  text-align: left;
+  content: '';
+  display: block;
+  width: 100%;
+  border-top: 1px dashed #fff;
+  top: -4rem;
+  left: 0;
+}
+button:hover,
+button:focus {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
 }
 
 @media screen and (max-width: 570px) {
   .floating_label,
   input,
-  #form_btn,
+  button,
   h2 {
     font-size: 3.5rem;
     padding: 1.5rem 10%;
@@ -247,7 +235,7 @@ input:not(:placeholder-shown) ~ .floating_label {
 @media screen and (max-width: 340px) {
   .floating_label,
   input,
-  #form_btn,
+  button,
   h2 {
     font-size: 3rem;
   }

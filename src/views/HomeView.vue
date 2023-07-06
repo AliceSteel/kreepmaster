@@ -87,7 +87,7 @@ export default {
   }
 }
 
-.scanlines {
+npm.scanlines {
   overflow: hidden;
   mix-blend-mode: difference;
 }
