@@ -96,7 +96,7 @@ export default {
     }
   },
   methods: {
-    checkAndSend() {
+    async checkAndSend() {
       let valid = true
       if (!this.name || this.name.length <= 1) {
         this.errors.name = 'Name longer than 1 letter is required.'
@@ -117,25 +117,18 @@ export default {
       }
 
       if (valid) {
-        /*const message_text =
+        const message_text =
           '<i>Message from KreepMaster</i>' +
           '%0a<b>Name: </b>' +
           this.name +
           '%0a<b>Email: </b>' +
           this.email +
           '%0a<b>Message: </b>' +
-          this.message*/
-        fetch /*POST https://gmail.googleapis.com/gmail/v1/users/alicedevlab%40gmail.com/messages/send?key=[YOUR_API_KEY] HTTP/1.1
+          this.message
 
-Authorization: Bearer [YOUR_ACCESS_TOKEN]
-Accept: application/json
-Content-Type: application/json
-
-{
-  "raw": "RnJvbTogSm9obiBEb2UgPGpkb2VAbWFjaGluZS5leGFtcGxlPiAKVG86IE9sZ2EgR2Fya3VzaGEgPG9sZ2EuZy5jcGhAZ21haWwuY29tPiAKU3ViamVjdDogU2F5aW5nIEhlbGxvIApEYXRlOiBUaHVyLCAwNiBKdWwgMjAyMyAwOTo1NTowNiAtMDYwMCAKTWVzc2FnZS1JRDogPDEyMzRAbG9jYWwubWFjaGluZS5leGFtcGxlPgoKVGhpcyBpcyBhIG1lc3NhZ2UganVzdCB0byBzYXkgaGVsbG8uIFNvLCAiSGVsbG8iLiA="
-}*/()
-          /*          `https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${message_text}&parse_mode=HTML`
-           */
+        fetch(
+          `https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${message_text}&parse_mode=HTML`
+        )
           .then((resp) => {
             return resp.json()
           })
