@@ -75,12 +75,12 @@
 </template>
 
 <script>
+import Email from '../utilities/email'
+
 export default {
   name: 'ContactForm',
   data() {
     return {
-      API_BOT_ID: '5430381288:AAE_eQ93YVTYwbmZ8s_uAyzqmgqXbPnE_Fk',
-      CHAT_ID: '-1001772014948',
       name: '',
       email: '',
       message: '',
@@ -115,25 +115,18 @@ export default {
         this.errors.message = 'Message longer than 2 characters is required.'
         valid = false
       }
-
       if (valid) {
-        const message_text =
-          '<i>Message from KreepMaster</i>' +
-          '%0a<b>Name: </b>' +
-          this.name +
-          '%0a<b>Email: </b>' +
-          this.email +
-          '%0a<b>Message: </b>' +
-          this.message
-
-        fetch(
-          `https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${message_text}&parse_mode=HTML`
-        )
+        Email.send({
+          Host: 'smtp.elasticemail.com',
+          Username: 'alicedevlab@gmail.com',
+          Password: '4E4CB299494A0BC888DA1CA24CA458DC7319',
+          To: 'olga.g.cph@gmail.com',
+          From: 'alicedevlab@gmail.com',
+          Subject: 'Message from KreepMaster App',
+          Body: this.name + ' from ' + this.email + ' sends message: ' + this.message
+        })
           .then((resp) => {
-            return resp.json()
-          })
-          .then((resp) => {
-            if (resp.ok) {
+            if (resp == 'OK') {
               this.answer.success = true
               this.answer.text = 'Message successfully sent'
               this.name = this.email = this.message = ''

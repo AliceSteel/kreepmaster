@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full min-h-screen pt-[30vh]">
-    <div class="w-3/4 container mx-auto grid grid-rows-2 grid-flow-col gap-8">
+  <section class="w-full min-h-screen pt-[30vh] flex flex-col justify-between">
+    <div class="w-3/4 mx-auto grid grid-rows-2 grid-flow-col gap-8">
       <div class="row-span-2 p-4"><img src="/img/info.png" alt="info" /></div>
 
       <h2 class="col-span-2">
@@ -15,12 +15,12 @@
       </p>
     </div>
 
-    <div class="w-full h-full py-8">
+    <div class="w-full h-full py-8 overflow-hidden">
       <img src="/img/arrows2.png" alt="arrows" srcset="" />
     </div>
   </section>
   <section id="contact">
-    <div class="w-3/4 container mx-auto grid grid-flow-col gap-8 pb-[10vh]">
+    <div class="w-3/4 mx-auto grid grid-flow-col gap-8 pb-[10vh]">
       <div class="row-span-2 p-4"><img src="/img/contact.png" alt="info" /></div>
       <h2 class="col-span-2">
         Fill out the booking form below to ask any questions, or reach out to us directly at
@@ -45,8 +45,6 @@ export default {
 <style scoped>
 .marquee {
   white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
   animation: marquee 10s linear infinite;
 }
 
