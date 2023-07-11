@@ -2,24 +2,22 @@
   <!--<header id="header" class="w-full p-0 fixed bg-transparent top-0 left-0 z-50">-->
   <!-- <nav class="container mx-auto flex justify-between items-center py-14">-->
   <!--  <ul class="flex flex-row justify-between gap-5 text-2xl uppercase">-->
-  <nav
-    class="menu-container fixed z-50 top-4 right-4 w-48 h-16 overflow-hidden uppercase"
-    :class="{ 'h-48': isMenuOpen }"
+  <header
+    class="fixed z-50 top-4 right-4 w-48 h-16 overflow-hidden uppercase bg-blend-difference cursor-ponter"
+    :class="{ 'h-80': isMenuOpen }"
   >
-    <div class="col col-1 absolute w-48 cursor-ponter left-0">
-      <div
-        class="menu-item p-4"
-        :class="{ slide_text: isMenuOpen }"
-        style="animation-delay: 0s"
-        id="menu-toggle"
-        @click="toggleMenu"
-      >
-        menu
-      </div>
-    </div>
-    <ul class="col col-2 absolute w-48 cursor-pointer left-48 flex flex-col items-left">
+    <button
+      class="absolute w-48 left-0 text-left p-4"
+      :class="{ slide_text: isMenuOpen }"
+      style="animation-delay: 0s"
+      id="menu-toggle"
+      @click.prevent.stop="toggleMenu"
+    >
+      MENU
+    </button>
+    <ul class="absolute w-48 cursor-pointer left-48 flex flex-col items-left">
       <li
-        class="menu-item p-4"
+        class="p-4"
         :class="{ slide_text: isMenuOpen }"
         style="animation-delay: 0s"
         id="close-menu"
@@ -27,21 +25,47 @@
       >
         <span class="text-white menu_link_white"> Close </span>
       </li>
-      <li class="menu-item p-4" :class="{ slide_text: isMenuOpen }" style="animation-delay: 0.2s">
+      <li
+        class="p-4"
+        :class="{ slide_text: isMenuOpen }"
+        style="animation-delay: 0.2s"
+        @click="toggleMenu"
+      >
+        <router-link :to="{ name: 'home' }" class="text-white menu_link_white" title="About"
+          >Home
+          <!--  <i class="fa fa-eye text-green-400 text-2xl md:hidden"></i>-->
+        </router-link>
+      </li>
+      <li
+        class="p-4"
+        :class="{ slide_text: isMenuOpen }"
+        style="animation-delay: 0.4s"
+        @click="toggleMenu"
+      >
         <router-link :to="{ name: 'about' }" class="text-white menu_link_white" title="About"
           >About
           <!--  <i class="fa fa-eye text-green-400 text-2xl md:hidden"></i>-->
         </router-link>
       </li>
 
-      <li class="menu-item p-4" :class="{ slide_text: isMenuOpen }" style="animation-delay: 0.4s">
+      <li
+        class="p-4"
+        :class="{ slide_text: isMenuOpen }"
+        style="animation-delay: 0.6s"
+        @click="toggleMenu"
+      >
         <router-link :to="{ name: 'music' }" class="text-white menu_link_white" title="Music"
           >Music
           <!--  <i class="fa fa-eye text-green-400 text-2xl md:hidden"></i>-->
         </router-link>
       </li>
 
-      <li class="menu-item p-4" :class="{ slide_text: isMenuOpen }" style="animation-delay: 0.6s">
+      <li
+        class="p-4"
+        :class="{ slide_text: isMenuOpen }"
+        style="animation-delay: 0.8s"
+        @click="toggleMenu"
+      >
         <router-link
           v-if="this.$route.name === 'about'"
           to="#contact"
@@ -60,7 +84,7 @@
       <!--  </ul>-->
 
       <!--   <ul class="flex flex-row justify-between items-center gap-5 text-2xl">-->
-      <li class="menu-item p-4" :class="{ slide_text: isMenuOpen }" style="animation-delay: 0.8s">
+      <!--<li class="menu-item p-4" :class="{ slide_text: isMenuOpen }" style="animation-delay: 0.8s">
         <a href="http://spotify" target="_blank" rel="noopener noreferrer" title="Spotify">
           <svg
             width="24"
@@ -139,9 +163,9 @@
             />
           </svg>
         </a>
-      </li>
+      </li>-->
     </ul>
-  </nav>
+  </header>
   <!--  </header>-->
 </template>
 
@@ -155,7 +179,6 @@ export default {
   },
   methods: {
     toggleMenu() {
-      //document.querySelector('.menu-item').classList.toggle('slide-right')
       this.isMenuOpen = !this.isMenuOpen
     }
   }
@@ -163,9 +186,6 @@ export default {
 </script>
 
 <style scoped>
-.invisible {
-  opacity: 0;
-}
 .slide_text {
   animation: slide-left 1s forwards;
 }
