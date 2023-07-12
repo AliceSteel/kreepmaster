@@ -24,6 +24,22 @@ const routes = [
   }
 ]
 
+function wait(duration) {
+  return new Promise((resolve) => setTimeout(resolve, duration))
+}
+
+async function tryScrollToAnchor(hash, timeout = 1000, delay = 100) {
+  while (timeout > 0) {
+    const el = document.querySelector(hash)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      break
+    }
+    await wait(delay)
+    timeout = timeout - delay
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
@@ -31,11 +47,12 @@ const router = createRouter({
   // eslint-disable-next-line no-unused-vars
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      return {
+      tryScrollToAnchor(to.hash, 1000, 100)
+      /* return {
         // el: document.getElementById('main'):
         el: to.hash,
         behavior: 'smooth'
-      }
+      }*/
     } else {
       return {
         top: 0,
