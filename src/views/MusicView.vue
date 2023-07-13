@@ -1,119 +1,105 @@
 <template>
-  <!-- <section class="project_slider">
-			<div class="container w100">
-				<carousel :settings="sliderSettings" :breakpoints="breakpoints">
-					<slide v-for="(image, index) in itemPics" :key="index">
-						<div class="carousel__item">
-							<img :src="require('@/assets/images/' + image)" alt="project_slider_2" v-if="image !== ' '">
-						</div>
-					</slide>
-
-					<template #addons>
-						<navigation />
-					</template>
-				</carousel>
-				<h3>{{ item.title }}</h3>
-			</div>
-		</section> -->
-  <Carousel
-    ref="carousel"
-    v-model="currentSlide"
-    snapAlign="center"
-    id="activeClasses"
-    :itemsToShow="1.5"
-    :wrapAround="true"
-    :transition="500"
-    class="image_slider bg-black"
-  >
-    <slide
-      class="carousel__item image_slide"
-      id="one"
-      style="background: url('/img/slider-img-1.jpg') no-repeat 50% 50%; background-size: cover"
+  <div class="relative">
+    <Carousel
+      ref="carousel"
+      v-model="currentSlide"
+      snapAlign="center"
+      id="activeClasses"
+      :itemsToShow="2"
+      :wrapAround="true"
+      :transition="500"
+      class="image_slider bg-black"
     >
-      <h1>Prepare To meet Your God</h1>
-      <p>2011 - EP</p>
-    </slide>
-    <slide
-      class="carousel__item image_slide"
-      id="two"
-      style="background: url('/img/slider-img-2.jpg') no-repeat 50% 50%; background-size: cover"
-    >
-      <h1>Supralizer</h1>
-      <p>2012 - Album</p>
-    </slide>
-    <slide
-      class="carousel__item image_slide"
-      id="three"
-      style="background: url('/img/slider-img-3.jpg') no-repeat 50% 50%; background-size: cover"
-    >
-      <h1>The Watchers</h1>
-      <p>2014 - Single</p>
-    </slide>
-    <slide
-      class="carousel__item image_slide"
-      id="four"
-      style="background: url('/img/slider-img-4.jpg') no-repeat 50% 50%; background-size: cover"
-    >
-      <h1>KM.3.Centralia</h1>
-      <p>2017 - Album</p>
-    </slide>
-    <slide
-      class="carousel__item image_slide"
-      id="five"
-      style="background: url('/img/slider-img-5.jpg') no-repeat 50% 50%; background-size: cover"
-    >
-      <h1>The Ionization</h1>
-      <p>2019 - Single</p>
-    </slide>
-    <slide
-      class="carousel__item image_slide"
-      id="six"
-      style="background: url('/img/slider-img-5.jpg') no-repeat 50% 50%; background-size: cover"
-    >
-      <h1>Conjoiners</h1>
-      <p>2022 - Album</p>
-    </slide>
-    <template #addons>
-      <navigation />
-    </template>
-  </Carousel>
-  <div class="buttons">
-    <button @click="prev" class="btn_prev">
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 30 10"
-        fill="white"
-        xmlns="http://www.w3.org/2000/svg"
+      <slide
+        class="carousel__item image_slide"
+        id="one"
+        style="background: url('/img/slider-img-1.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <path
-          d="M30 6.09375V4.51562L2.29688 4.57812L3.73438 2.78125L3.75 0.625L0 5.3125L3.75 9.96875L3.76562 7.95312L2.3125 6.17188L30 6.09375Z"
-          fill="white"
-        />
-      </svg>
-    </button>
-    <button @click="next" class="btn_next">
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 30 10"
-        fill="white"
-        xmlns="http://www.w3.org/2000/svg"
+        <h1>Prepare To meet Your God</h1>
+        <p>2011 - EP</p>
+      </slide>
+      <slide
+        class="carousel__item image_slide"
+        id="two"
+        style="background: url('/img/slider-img-2.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <path
-          d="M0 6.09375V4.51562L27.7031 4.57812L26.2656 2.78125L26.25 0.625L30 5.3125L26.25 9.96875L26.2344 7.95312L27.6875 6.17188L0 6.09375Z"
+        <h1>Supralizer</h1>
+        <p>2012 - Album</p>
+      </slide>
+      <slide
+        class="carousel__item image_slide"
+        id="three"
+        style="background: url('/img/slider-img-3.jpg') no-repeat 50% 50%; background-size: cover"
+      >
+        <h1>The Watchers</h1>
+        <p>2014 - Single</p>
+      </slide>
+      <slide
+        class="carousel__item image_slide"
+        id="four"
+        style="background: url('/img/slider-img-4.jpg') no-repeat 50% 50%; background-size: cover"
+      >
+        <h1>KM.3.Centralia</h1>
+        <p>2017 - Album</p>
+      </slide>
+      <slide
+        class="carousel__item image_slide"
+        id="five"
+        style="background: url('/img/slider-img-5.jpg') no-repeat 50% 50%; background-size: cover"
+      >
+        <h1>The Ionization</h1>
+        <p>2019 - Single</p>
+      </slide>
+      <slide
+        class="carousel__item image_slide"
+        id="six"
+        style="background: url('/img/slider-img-5.jpg') no-repeat 50% 50%; background-size: cover"
+      >
+        <h1>Conjoiners</h1>
+        <p>2022 - Album</p>
+      </slide>
+      <template #addons>
+        <navigation />
+      </template>
+    </Carousel>
+    <div class="buttons">
+      <button @click="prev" class="btn_prev">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 30 10"
           fill="white"
-        />
-      </svg>
-    </button>
-  </div>
-  <div class="blocks">
-    <div class="block_1"></div>
-    <div class="block_2"></div>
-    <div class="block_3"></div>
-  </div>
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M30 6.09375V4.51562L2.29688 4.57812L3.73438 2.78125L3.75 0.625L0 5.3125L3.75 9.96875L3.76562 7.95312L2.3125 6.17188L30 6.09375Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <button @click="next" class="btn_next">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 30 10"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 6.09375V4.51562L27.7031 4.57812L26.2656 2.78125L26.25 0.625L30 5.3125L26.25 9.96875L26.2344 7.95312L27.6875 6.17188L0 6.09375Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="blocks">
+      <div class="block_1"></div>
+      <div class="block_2"></div>
+      <div class="block_3"></div>
+    </div>
 
-  <div class="overlay"></div>
+    <div class="overlay"></div>
+  </div>
 </template>
 
 <script>
@@ -210,7 +196,7 @@ body {
   }
 
   .carousel__slide--active {
-    z-index: 1;
+    z-index: 3;
     transform: scale(1.2);
     transition: transform 0.8s 1.4s cubic-bezier(0.84, 0, 0.08, 0.99);
   }
@@ -253,8 +239,14 @@ body {
 .btn_next {
   background-image: url('/img/arrow_r.svg');
 }*/
-.block_1 {
+.blocks {
   z-index: 1;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+}
+.block_1 {
+  z-index: 2;
   position: fixed;
   height: 100vh;
   width: 5%;
@@ -262,7 +254,7 @@ body {
   background: black;
 }
 .block_2 {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   height: 100vh;
   width: 25%;
@@ -270,7 +262,7 @@ body {
   background: black;
 }
 .block_3 {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   height: 100vh;
   width: 5%;
@@ -278,7 +270,7 @@ body {
   background: black;
 }
 .overlay {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   height: 100vh;
   width: 20%;
