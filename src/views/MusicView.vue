@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative overflow-hidden h-screen">
     <Carousel
       ref="carousel"
       v-model="currentSlide"
@@ -8,61 +8,46 @@
       :itemsToShow="2"
       :wrapAround="true"
       :transition="500"
-      class="image_slider bg-black"
+      class="bg-black"
     >
       <slide
-        class="carousel__item image_slide"
+        class="carousel__item w-full h-screen p-0 z-1"
         id="one"
-        style="background: url('/img/slider-img-1.jpg') no-repeat 50% 50%; background-size: cover"
+        style="background: url('/img/prepare.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <h1>Prepare To meet Your God</h1>
-        <p>2011 - EP</p>
       </slide>
       <slide
-        class="carousel__item image_slide"
+        class="carousel__item w-full h-screen p-0 z-1"
         id="two"
-        style="background: url('/img/slider-img-2.jpg') no-repeat 50% 50%; background-size: cover"
+        style="background: url('/img/supralizer.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <h1>Supralizer</h1>
-        <p>2012 - Album</p>
       </slide>
       <slide
-        class="carousel__item image_slide"
+        class="carousel__item w-full h-screen p-0 z-1"
         id="three"
-        style="background: url('/img/slider-img-3.jpg') no-repeat 50% 50%; background-size: cover"
+        style="background: url('/img/watchers.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <h1>The Watchers</h1>
-        <p>2014 - Single</p>
       </slide>
       <slide
-        class="carousel__item image_slide"
+        class="carousel__item w-full h-screen p-0 z-1"
         id="four"
-        style="background: url('/img/slider-img-4.jpg') no-repeat 50% 50%; background-size: cover"
+        style="background: url('/img/centralia.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <h1>KM.3.Centralia</h1>
-        <p>2017 - Album</p>
       </slide>
       <slide
-        class="carousel__item image_slide"
+        class="carousel__item w-full h-screen p-0 z-1"
         id="five"
-        style="background: url('/img/slider-img-5.jpg') no-repeat 50% 50%; background-size: cover"
+        style="background: url('/img/ionization.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <h1>The Ionization</h1>
-        <p>2019 - Single</p>
       </slide>
       <slide
-        class="carousel__item image_slide"
+        class="carousel__item w-full h-screen p-0 z-1"
         id="six"
-        style="background: url('/img/slider-img-5.jpg') no-repeat 50% 50%; background-size: cover"
+        style="background: url('/img/conjoiners.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <h1>Conjoiners</h1>
-        <p>2022 - Album</p>
       </slide>
-      <template #addons>
-        <navigation />
-      </template>
     </Carousel>
-    <div class="buttons">
+    <div class="fixed left-[20%] bottom-[10%] z-20 flex justify-start items-center">
       <button @click="prev" class="btn_prev">
         <svg
           width="30"
@@ -92,35 +77,25 @@
         </svg>
       </button>
     </div>
-    <div class="blocks">
-      <div class="block_1"></div>
-      <div class="block_2"></div>
-      <div class="block_3"></div>
+    <div class="overlays">
+      <div class="overlay_left"></div>
+      <div class="overlay_right"></div>
     </div>
-
-    <div class="overlay"></div>
   </div>
 </template>
 
 <script>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import { Carousel, Slide } from 'vue3-carousel'
 export default {
   name: 'MusicView',
   components: {
     Carousel,
-    Slide,
-    Navigation
+    Slide
   },
   data() {
     return {
       currentSlide: 0,
-      sliderSettings: {
-        /* itemsToShow: 1.5,
-        wrapAround: true,*/
-        snapAlign: 'center'
-      },
-
       breakpoints: {
         // 700px and up
         700: {
@@ -142,29 +117,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  height: 100vh;
-  overflow: hidden;
-}
-
-.image_slider {
-  z-index: 1;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-}
-.image_slide {
-  height: 100vh;
-  margin: 0 auto;
-}
 #activeClasses {
   .carousel__slide {
-    padding: 5;
+    padding: 0;
   }
 
   .carousel__viewport {
     perspective: 2000px;
+    overflow: hidden;
   }
 
   .carousel__track {
@@ -179,143 +139,47 @@ body {
     transform: rotateY(-20deg) scale(0.9);
   }
 
-  /* .carousel__slide--active ~ .carousel__slide {
+  .carousel__slide--active ~ .carousel__slide {
     transform: rotateY(20deg) scale(0.9);
-  }*/
+  }
 
   .carousel__slide--prev {
-    opacity: 0.9;
+    opacity: 0.4;
     transform: rotateY(-10deg) scale(0.95);
     z-index: 0;
   }
 
   .carousel__slide.carousel__slide--next {
-    opacity: 0.9;
+    opacity: 0.4;
     transform: rotateY(10deg) scale(0.95);
     z-index: 0;
   }
 
   .carousel__slide--active {
     z-index: 3;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.8s 1.4s cubic-bezier(0.84, 0, 0.08, 0.99);
   }
   .carousel__slide {
     transition: transform 0.7s cubic-bezier(0.84, 0, 0.08, 0.99);
   }
 }
-.buttons {
-  position: fixed;
-  left: 15%;
-  bottom: 10%;
-  top: auto;
-  z-index: 20;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 .btn_prev,
 .btn_next {
   background-color: transparent;
   cursor: pointer;
   margin: 0;
-
   background-position: 50% 50%;
   background-repeat: no-repeat;
   padding: 1.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #fff;
   font-size: 1rem;
   border-radius: 50%;
   margin: 0.4rem;
 
   &:focus {
     outline: none;
-  }
-}
-/*.btn_prev {
-  background-image: url('/img/arrow_l.svg');
-}
-
-.btn_next {
-  background-image: url('/img/arrow_r.svg');
-}*/
-.blocks {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  height: 100vh;
-}
-.block_1 {
-  z-index: 2;
-  position: fixed;
-  height: 100vh;
-  width: 5%;
-  left: 0%;
-  background: black;
-}
-.block_2 {
-  z-index: 2;
-  position: fixed;
-  height: 100vh;
-  width: 25%;
-  left: 25%;
-  background: black;
-}
-.block_3 {
-  z-index: 2;
-  position: fixed;
-  height: 100vh;
-  width: 5%;
-  right: 0%;
-  background: black;
-}
-.overlay {
-  z-index: 3;
-  position: fixed;
-  height: 100vh;
-  width: 20%;
-  left: 5%;
-  background: rgba(0, 0, 0, 0.25);
-}
-/*.text-slider_wrapper {
-  z-index: 2;
-  position: absolute;
-  width: 45%;
-}
-.text_slider {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
-.text_slide h1 {
-  color: #fff;
-  font-size: 4rem;
-  text-transform: uppercase;
-  padding-left: 10%;
-}*/
-@media (max-width: 990px) {
-  .block_2,
-  .overlay {
-    display: none;
-  }
-  .block_1 {
-    width: 50%;
-  }
-  .block_3 {
-    width: 12%;
-  }
-  .slide_slick {
-    display: none !important;
-  }
-  .text_slide h1 {
-    font-size: 30px !important;
-  }
-  .text-slider_wrapper {
-    position: absolute;
-    top: 60% !important;
-  }
-  .slide_control {
-    left: 22.5%;
   }
 }
 </style>
