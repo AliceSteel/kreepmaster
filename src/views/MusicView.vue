@@ -15,39 +15,47 @@
         id="one"
         style="background: url('/img/prepare.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <p class="flex justify-center self-end pb-[15%]">2011</p>
       </slide>
       <slide
         class="carousel__item w-full h-screen p-0 z-1"
         id="two"
         style="background: url('/img/supralizer.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <p class="flex justify-center self-end pb-[15%]">2012</p>
       </slide>
       <slide
         class="carousel__item w-full h-screen p-0 z-1"
         id="three"
         style="background: url('/img/watchers.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <p class="flex justify-center self-end pb-[15%]">2014</p>
       </slide>
       <slide
         class="carousel__item w-full h-screen p-0 z-1"
         id="four"
         style="background: url('/img/centralia.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <p class="flex justify-center self-end pb-[15%]">2017</p>
       </slide>
       <slide
         class="carousel__item w-full h-screen p-0 z-1"
         id="five"
         style="background: url('/img/ionization.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <div class="flex justify-center self-end pb-[15%] backdrop-opacity-95">
+          <p>2019</p>
+        </div>
       </slide>
       <slide
         class="carousel__item w-full h-screen p-0 z-1"
         id="six"
         style="background: url('/img/conjoiners.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <p class="flex justify-center self-end pb-[15%]">2022</p>
       </slide>
     </Carousel>
-    <div class="fixed left-[20%] bottom-[10%] z-20 flex justify-start items-center">
+    <div class="fixed left-[15%] bottom-[10%] z-20 flex justify-start items-center">
       <button @click="prev" class="btn_prev">
         <svg
           width="30"

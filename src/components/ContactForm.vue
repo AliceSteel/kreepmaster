@@ -120,7 +120,7 @@ export default {
           Host: 'smtp.elasticemail.com',
           Username: 'alicedevlab@gmail.com',
           Password: '4E4CB299494A0BC888DA1CA24CA458DC7319',
-          To: 'olga.g.cph@gmail.com',
+          To: 'kreepomatic@gmail.com',
           From: 'alicedevlab@gmail.com',
           Subject: 'Message from KreepMaster App',
           Body: this.name + ' from ' + this.email + ' sends message: ' + this.message
