@@ -31,14 +31,16 @@
       </div>
     </div>
   </section>
+  <app-footer />
 </template>
 
 <script>
 import ContactForm from '../components/ContactForm.vue'
+import AppFooter from '../components/AppFooter.vue'
 
 export default {
   name: 'AboutView',
-  components: { ContactForm }
+  components: { ContactForm, AppFooter }
 }
 </script>
 

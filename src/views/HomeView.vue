@@ -6,7 +6,9 @@
     <div class="container_glitch font-[Exan]">
       <div class="glitch" data-text="KreepMaster">kreepmaster</div>
       <div class="glow">kreepmaster</div>
-      <p class="subtitle">instrumental metal</p>
+      <p class="subtitle w-full absolute top-[200%] uppercase text-center text-base py-4">
+        instrumental metal
+      </p>
     </div>
     <div class="scanlines"></div>
   </section>
@@ -131,13 +133,8 @@ npm.scanlines {
 }
 
 .subtitle {
-  font-size: 0.8vw;
   color: #fff;
-  text-transform: uppercase;
-  width: 100%;
-  position: absolute;
-  top: 200%;
-  text-align: center;
+
   animation: glitch-2 5s 5.02s infinite;
 }
 
