@@ -1,8 +1,8 @@
 <template>
   <footer>
-    <div class="w-3/4 mx-auto">
+    <div class="container sm:w-3/4 mx-auto">
       <div
-        class="w-full h-full flex flex-wrap-reverse gap-4 justify-evenly items-center py-16 sm:justify-between"
+        class="w-full h-full flex flex-wrap-reverse gap-4 justify-end sm:justify-between items-center py-16"
       >
         <div class="opacity-50 text-base">
           Powered by:<a
@@ -12,7 +12,7 @@
             >AliceLab</a
           >
         </div>
-        <ul class="w-1/2 flex flex-wrap justify-end list-none">
+        <ul class="w-full sm:w-1/2 flex flex-wrap justify-end">
           <li class="text-right">More ways to contact:</li>
           <li>
             <a

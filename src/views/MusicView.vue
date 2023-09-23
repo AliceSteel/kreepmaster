@@ -15,6 +15,14 @@
         id="one"
         style="background: url('/img/prepare.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <a
+          href="https://open.spotify.com/album/2EzcKKczqBdqoNtyDTWxkz"
+          target="_blank"
+          rel="nofollow, noreferrer"
+          class="absolute top-0 left-0 w-full h-full"
+          title="Listen on Spotify"
+        >
+        </a>
         <p class="flex justify-center self-end pb-[15%]">2011</p>
       </slide>
       <slide
@@ -22,6 +30,14 @@
         id="two"
         style="background: url('/img/supralizer.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <a
+          href="https://open.spotify.com/album/1KTuV6rJbcZKifRN7EqGbG"
+          target="_blank"
+          rel="nofollow, noreferrer"
+          class="absolute top-0 left-0 w-full h-full"
+          title="Listen on Spotify"
+        >
+        </a>
         <p class="flex justify-center self-end pb-[15%]">2012</p>
       </slide>
       <slide
@@ -29,6 +45,14 @@
         id="three"
         style="background: url('/img/watchers.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <a
+          href="https://open.spotify.com/album/7F2BtSWzn5S3i8pdHOpkJq"
+          target="_blank"
+          rel="nofollow, noreferrer"
+          class="absolute top-0 left-0 w-full h-full"
+          title="Listen on Spotify"
+        >
+        </a>
         <p class="flex justify-center self-end pb-[15%]">2014</p>
       </slide>
       <slide
@@ -36,6 +60,14 @@
         id="four"
         style="background: url('/img/centralia.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <a
+          href="https://open.spotify.com/album/2EOMKxNCnCNixdxTrlCMy5"
+          target="_blank"
+          rel="nofollow, noreferrer"
+          class="absolute top-0 left-0 w-full h-full"
+          title="Listen on Spotify"
+        >
+        </a>
         <p class="flex justify-center self-end pb-[15%]">2017</p>
       </slide>
       <slide
@@ -43,15 +75,29 @@
         id="five"
         style="background: url('/img/ionization.jpg') no-repeat 50% 50%; background-size: cover"
       >
-        <div class="flex justify-center self-end pb-[15%] backdrop-opacity-95">
-          <p>2019</p>
-        </div>
+        <a
+          href="https://open.spotify.com/album/71Xe7v06dIH23N9tl6FoxL"
+          target="_blank"
+          rel="nofollow, noreferrer"
+          class="absolute top-0 left-0 w-full h-full"
+          title="Listen on Spotify"
+        >
+        </a>
+        <p class="flex justify-center self-end pb-[15%]">2019</p>
       </slide>
       <slide
         class="carousel__item w-full h-screen p-0 z-1"
         id="six"
         style="background: url('/img/conjoiners.jpg') no-repeat 50% 50%; background-size: cover"
       >
+        <a
+          href="https://open.spotify.com/album/4efpdtSPPliuFvjy6fzKfw"
+          target="_blank"
+          rel="nofollow, noreferrer"
+          class="absolute top-0 left-0 w-full h-full"
+          title="Listen on Spotify"
+        >
+        </a>
         <p class="flex justify-center self-end pb-[15%]">2022</p>
       </slide>
     </Carousel>
