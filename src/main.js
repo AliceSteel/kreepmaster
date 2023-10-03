@@ -5,7 +5,9 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import { inject } from '@vercel/analytics'
 
+inject()
 const app = createApp(App)
 
 app.use(createPinia())
