@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="container sm:w-3/4 mx-auto py-8 pl-[10%]">
-      <ul class="w-full flex justify-left items-center gap-4 py-4">
+      <ul class="w-full flex justify-left items-center gap-4 py-4 pl-[20%]">
         <li>
           <a
             href="mailto:kreepomatic@gmail.com"
