@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <div class="container sm:w-3/4 mx-auto py-8 pl-[10%]">
-      <ul class="w-full flex justify-left items-center gap-4 py-4 pl-[20%]">
+    <div class="container sm:w-3/4 mx-auto py-8">
+      <ul class="w-full flex justify-center items-center gap-8 py-4">
         <li>
           <a
             href="mailto:kreepomatic@gmail.com"
@@ -65,7 +65,7 @@
         </li>
       </ul>
 
-      <div class="opacity-50 text-base py-8">
+      <div class="opacity-50 text-base py-8 px-4">
         Powered by:<a
           href="https://alicelab.vercel.app/"
           target="_blank"
