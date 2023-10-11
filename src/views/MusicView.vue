@@ -5,9 +5,10 @@
       v-model="currentSlide"
       snapAlign="center"
       id="activeClasses"
-      :itemsToShow="2"
+      :itemsToShow="1"
       :wrapAround="true"
       :transition="500"
+      :breakpoints="breakpoints"
       class="bg-black"
     >
       <slide
@@ -152,9 +153,9 @@ export default {
     return {
       currentSlide: 0,
       breakpoints: {
-        // 700px and up
-        700: {
-          /*   itemsToShow: 2.5*/
+        // 500px and up
+        500: {
+          itemsToShow: 2
         }
       }
     }
