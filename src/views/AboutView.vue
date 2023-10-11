@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full min-h-screen pt-[30vh] flex flex-col justify-between mb-8">
+  <section class="w-full min-h-screen pt-24 md:pt-[30vh] flex flex-col justify-between mb-8">
     <div class="container sm:w-3/4 mx-auto grid grid-col-2 grid-row-3 gap-8">
       <div class="row-span-2 p-4"><img src="/img/info.png" alt="info" /></div>
 

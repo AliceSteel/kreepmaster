@@ -7,7 +7,7 @@
             href="mailto:kreepomatic@gmail.com"
             rel="nofollow, noreferrer"
             title="Email"
-            class="flex p-4 bg-gray-50 rounded-full hover:bg-lime-700"
+            class="flex p-4 bg-gray-50 rounded-full hover:bg-lime-700 hover:scale-125"
             ><svg xmlns="http://www.w3.org/2000/svg" height="0.625em" viewBox="0 0 512 512">
               <!--! Font Awesome Free 6.4.2 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
               <path
@@ -22,7 +22,7 @@
             target="_blank"
             title="Facebook"
             rel="nofollow, noreferrer"
-            class="flex px-4 py-3 bg-gray-50 rounded-full hover:bg-lime-700"
+            class="flex px-4 py-3 bg-gray-50 rounded-full hover:bg-lime-700 hover:scale-125"
             ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
               <!--! Font Awesome Free 6.4.2 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
               <path
@@ -37,7 +37,7 @@
             target="_blank"
             title="Instagram"
             rel="nofollow, noreferrer"
-            class="flex p-3 bg-gray-50 rounded-full hover:bg-lime-700"
+            class="flex p-3 bg-gray-50 rounded-full hover:bg-lime-700 hover:scale-125"
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
               <!--! Font Awesome Free 6.4.2 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -53,7 +53,7 @@
             target="_blank"
             title="Youtube"
             rel="nofollow, noreferrer"
-            class="flex py-3 px-2.5 bg-gray-50 rounded-full hover:bg-lime-700"
+            class="flex py-3 px-2.5 bg-gray-50 rounded-full hover:bg-lime-700 hover:scale-125"
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
               <!--! Font Awesome Free 6.4.2 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
