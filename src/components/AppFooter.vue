@@ -66,11 +66,8 @@
       </ul>
 
       <div class="opacity-50 text-base py-8 px-4">
-        Powered by:<a
-          href="https://alicelab.vercel.app/"
-          target="_blank"
-          class="menu_link_white ml-6"
-          >AliceLab</a
+        Powered by:<a href="https://olgadevlab.com" target="_blank" class="menu_link_white ml-6"
+          >OlgaDevLab</a
         >
       </div>
     </div>

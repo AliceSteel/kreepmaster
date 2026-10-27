@@ -12,94 +12,24 @@
       class="bg-black"
     >
       <slide
+        v-for="album in albums"
+        :key="album.id"
         class="carousel__item w-full h-screen p-0 z-1"
-        id="one"
-        style="background: url('/img/prepare.jpg') no-repeat 50% 50%; background-size: cover"
+        :id="album.id"
+        :style="{ background: `url('${album.backgroundImg}') center / cover no-repeat` }"
       >
         <a
-          href="https://open.spotify.com/album/2EzcKKczqBdqoNtyDTWxkz"
+          :href="album.link"
           target="_blank"
           rel="nofollow, noreferrer"
           class="absolute top-0 left-0 w-full h-full"
           title="Listen on Spotify"
         >
         </a>
-        <p class="flex justify-center self-end pb-[15%]">2011</p>
-      </slide>
-      <slide
-        class="carousel__item w-full h-screen p-0 z-1"
-        id="two"
-        style="background: url('/img/supralizer.jpg') no-repeat 50% 50%; background-size: cover"
-      >
-        <a
-          href="https://open.spotify.com/album/1KTuV6rJbcZKifRN7EqGbG"
-          target="_blank"
-          rel="nofollow, noreferrer"
-          class="absolute top-0 left-0 w-full h-full"
-          title="Listen on Spotify"
-        >
-        </a>
-        <p class="flex justify-center self-end pb-[15%]">2012</p>
-      </slide>
-      <slide
-        class="carousel__item w-full h-screen p-0 z-1"
-        id="three"
-        style="background: url('/img/watchers.jpg') no-repeat 50% 50%; background-size: cover"
-      >
-        <a
-          href="https://open.spotify.com/album/7F2BtSWzn5S3i8pdHOpkJq"
-          target="_blank"
-          rel="nofollow, noreferrer"
-          class="absolute top-0 left-0 w-full h-full"
-          title="Listen on Spotify"
-        >
-        </a>
-        <p class="flex justify-center self-end pb-[15%]">2014</p>
-      </slide>
-      <slide
-        class="carousel__item w-full h-screen p-0 z-1"
-        id="four"
-        style="background: url('/img/centralia.jpg') no-repeat 50% 50%; background-size: cover"
-      >
-        <a
-          href="https://open.spotify.com/album/2EOMKxNCnCNixdxTrlCMy5"
-          target="_blank"
-          rel="nofollow, noreferrer"
-          class="absolute top-0 left-0 w-full h-full"
-          title="Listen on Spotify"
-        >
-        </a>
-        <p class="flex justify-center self-end pb-[15%]">2017</p>
-      </slide>
-      <slide
-        class="carousel__item w-full h-screen p-0 z-1"
-        id="five"
-        style="background: url('/img/ionization.jpg') no-repeat 50% 50%; background-size: cover"
-      >
-        <a
-          href="https://open.spotify.com/album/71Xe7v06dIH23N9tl6FoxL"
-          target="_blank"
-          rel="nofollow, noreferrer"
-          class="absolute top-0 left-0 w-full h-full"
-          title="Listen on Spotify"
-        >
-        </a>
-        <p class="flex justify-center self-end pb-[15%]">2019</p>
-      </slide>
-      <slide
-        class="carousel__item w-full h-screen p-0 z-1"
-        id="six"
-        style="background: url('/img/conjoiners.jpg') no-repeat 50% 50%; background-size: cover"
-      >
-        <a
-          href="https://open.spotify.com/album/4efpdtSPPliuFvjy6fzKfw"
-          target="_blank"
-          rel="nofollow, noreferrer"
-          class="absolute top-0 left-0 w-full h-full"
-          title="Listen on Spotify"
-        >
-        </a>
-        <p class="flex justify-center self-end pb-[15%]">2022</p>
+        <div class="flex flex-col justify-center self-end pb-[15%]">
+          <h2 class="capitalize text-4xl font-bold">{{ album.title }}</h2>
+          <p>{{ album.year }}</p>
+        </div>
       </slide>
     </Carousel>
     <div class="fixed left-[15%] bottom-[10%] z-20 flex justify-start items-center">
@@ -142,6 +72,7 @@
 <script>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
+import musicData from '@/assets/musicData.json'
 
 export default {
   name: 'MusicView',
@@ -151,6 +82,7 @@ export default {
   },
   data() {
     return {
+      albums: [...musicData.albums].sort((a, b) => Number(b.year) - Number(a.year)),
       currentSlide: 0,
       breakpoints: {
         // 500px and up

@@ -18,7 +18,7 @@
     </div>
 
     <div class="hidden sm:block w-full h-full py-8 overflow-hidden">
-      <img src="/img/arrows2.png" alt="arrows" />
+      <img src="/img/arrows2.png" alt="arrows" class="marquee" />
     </div>
   </section>
   <section id="contact">
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import ContactForm from '../components/ContactForm.vue'
+import ContactForm from '@/components/ContactForm.vue'
 import AppFooter from '@/components/AppFooter.vue'
 
 export default {

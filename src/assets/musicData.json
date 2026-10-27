@@ -1,0 +1,53 @@
+{
+"albums": [
+    {
+        "id": 0,
+        "title": "Prepare to meet your god",
+        "year": "2011",
+        "link":"https://open.spotify.com/album/2EzcKKczqBdqoNtyDTWxkz",
+        "backgroundImg": "/img/prepare.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Supralizer",
+        "year": "2012",
+        "link":"https://open.spotify.com/album/1KTuV6rJbcZKifRN7EqGbG",
+        "backgroundImg": "/img/supralizer.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Watchers",
+        "year": "2014",
+        "link":"https://open.spotify.com/album/7F2BtSWzn5S3i8pdHOpkJq",
+        "backgroundImg": "/img/watchers.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Centralia",
+        "year": "2017",
+        "link":"https://open.spotify.com/album/2EOMKxNCnCNixdxTrlCMy5",
+        "backgroundImg": "/img/centralia.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Ionization",
+        "year": "2019",
+        "link":"https://open.spotify.com/album/71Xe7v06dIH23N9tl6FoxL",
+        "backgroundImg": "/img/ionization.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Conjoiners",
+        "year": "2022",
+        "link":"https://open.spotify.com/album/4efpdtSPPliuFvjy6fzKfw",
+        "backgroundImg": "/img/conjoiners.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Geneva-9",
+        "year": "2026",
+        "link": "https://open.spotify.com/album/4F2UIBbaRvv4WwPcnGf8mS",
+        "backgroundImg": "/img/geneva-9.jpg"
+    }
+]
+}
